@@ -32,4 +32,15 @@ alert( 4 ** (1/2) );  // 2 (power of 1/2 is the same as a square root)
 let a, b, c, d = 1;
 a = b = (c = d + 2);
 ```
-
+#### 2.12 Nullish coalescing operator `??`
+Finds a first “defined” variable from the list. `Who is the first goodie??!` Quick defaults assigning.
+```js 
+let firstName = null, lastName = null, nickName = "Supercoder";
+alert(firstName ?? lastName ?? nickName ?? "Anonymous");  // Supercoder, show the first not-null/undefined value
+```
+Comparison with `||`
+```js 
+let height = 0;
+alert(height || 100); // 100, returns the first truthy value.
+alert(height ?? 100); // 0  , returns the first defined value.
+```
