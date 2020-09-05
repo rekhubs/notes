@@ -57,3 +57,13 @@ outer: for (let i = 0; i < 3; i++) {
   }
 }
 ```
+#### 2.15 Functions
+Default values for parameters.
+```js
+function showMessage(from, text = "no text given") {
+  alert( from + ": " + text );
+}
+
+showMessage("Ann"); // Ann: no text given
+```
+... can use a more complex expression, which will be evaluated __every time the function is called__ without the respective parameter.
