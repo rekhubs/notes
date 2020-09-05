@@ -67,3 +67,8 @@ function showMessage(from, text = "no text given") {
 showMessage("Ann"); // Ann: no text given
 ```
 ... can use a more complex expression, which will be evaluated __every time the function is called__ without the respective parameter.
+
+### 5. Data Types
+### 6. Advanced working with functions
+### 10. Classes
+
