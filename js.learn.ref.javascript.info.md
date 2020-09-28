@@ -1,6 +1,7 @@
 
 notes reading [https://javascript.info/](https://javascript.info/) (project on GitHub [here](https://github.com/javascript-tutorial/en.javascript.info))<br/>
-The tutorial has 14 chapters for part 1 (21 Aug 2020). 
+The tutorial has 14 chapters for part 1 (21 Aug 2020). <br/>
+*see also, some useful materials: MDN JS [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)*
 
 ### 2. JavaScript Fundamentals
 #### 2.3 The modern mode, `"use strict"`
