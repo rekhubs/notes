@@ -3,6 +3,9 @@ notes reading [https://javascript.info/](https://javascript.info/) (project on G
 The tutorial has 14 chapters for part 1 (21 Aug 2020). <br/>
 *see also, some useful materials: MDN JS [docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)*
 
+progress: chapter 2 finished, on chapter 8 <br/><br/>
+
+
 ### 2. JavaScript Fundamentals
 #### 2.3 The modern mode, `"use strict"`
 `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the “modern” way.
@@ -70,6 +73,12 @@ showMessage("Ann"); // Ann: no text given
 ... can use a more complex expression, which will be evaluated __every time the function is called__ without the respective parameter.
 
 ### 5. Data Types
+
 ### 6. Advanced working with functions
+
+### 8. Prototypes, inheritance
+#### 8.1 Prototypal inheritance
+
+
 ### 10. Classes
 
