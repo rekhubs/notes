@@ -6,6 +6,21 @@ The tutorial has 14 chapters for part 1 (21 Aug 2020). <br/>
 progress: chapter 2 finished, on chapter 8 <br/><br/>
 
 
+
+- [2. JavaScript Fundamentals](#2-javascript-fundamentals)
+  - [2.3 The modern mode, `"use strict"`](#23-the-modern-mode-use-strict)
+  - [2.7 Type Conversions](#27-type-conversions)
+  - [2.8 Basic operators, maths](#28-basic-operators-maths)
+  - [2.12 Nullish coalescing operator `??`](#212-nullish-coalescing-operator)
+  - [2.13 Loops: while and for](#213-loops-while-and-for)
+  - [2.15 Functions](#215-functions)
+- [5. Data Types](#5-data-types)
+- [6. Advanced working with functions](#6-advanced-working-with-functions)
+- [8. Prototypes, inheritance](#8-prototypes-inheritance)
+  - [8.1 Prototypal inheritance](#81-prototypal-inheritance)
+- [10. Classes](#10-classes)
+
+
 ### 2. JavaScript Fundamentals
 #### 2.3 The modern mode, `"use strict"`
 `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the “modern” way.
