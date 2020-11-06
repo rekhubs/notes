@@ -20,4 +20,3 @@ import org.elasticsearch.index.query.QueryBuilders;
 QueryBuilders.wildcardQuery("number", "*333/KK*".toLowerCase());
 ```
 
-<br/>
