@@ -18,6 +18,7 @@ progress: chapter 2 finished, on chapter 8 <br/><br/>
 - [6. Advanced working with functions](#6-advanced-working-with-functions)
 - [8. Prototypes, inheritance](#8-prototypes-inheritance)
   - [8.1 Prototypal inheritance](#81-prototypal-inheritance)
+  - [8.2 F.prototype](#82-fprototype)
 - [10. Classes](#10-classes)
 
 
@@ -83,7 +84,7 @@ function showMessage(from, text = "no text given") {
   alert( from + ": " + text );
 }
 
-showMessage("Ann"); // Ann: no text given
+showMessage("Alice"); // Alice: no text given
 ```
 ... can use a more complex expression, which will be evaluated __every time the function is called__ without the respective parameter.
 
@@ -93,7 +94,18 @@ showMessage("Ann"); // Ann: no text given
 
 ### 8. Prototypes, inheritance
 #### 8.1 Prototypal inheritance
+#### 8.2 F.prototype
+
 
 
 ### 10. Classes
 
+
+
+<br/><br/><br/><br/>
+some other notes
+
+dynamic
+* script
+* binding, applying
+* F.prototype
