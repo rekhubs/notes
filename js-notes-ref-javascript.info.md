@@ -11,9 +11,11 @@ progress: chapter 2 finished, on chapter 8 <br/><br/>
   - [2.3 The modern mode, `"use strict"`](#23-the-modern-mode-use-strict)
   - [2.7 Type Conversions](#27-type-conversions)
   - [2.8 Basic operators, maths](#28-basic-operators-maths)
-  - [2.12 Nullish coalescing operator `??`](#212-nullish-coalescing-operator)
+  - [2.12 Nullish coalescing operator `??`](#212-nullish-coalescing-operator-)
   - [2.13 Loops: while and for](#213-loops-while-and-for)
   - [2.15 Functions](#215-functions)
+- [4. Objects: the basics](#4-objects-the-basics)
+  - [4.5 Constructor, operator "new"](#45-constructor-operator-new)
 - [5. Data Types](#5-data-types)
 - [6. Advanced working with functions](#6-advanced-working-with-functions)
 - [8. Prototypes, inheritance](#8-prototypes-inheritance)
@@ -87,6 +89,8 @@ function showMessage(from, text = "no text given") {
 showMessage("Alice"); // Alice: no text given
 ```
 ... can use a more complex expression, which will be evaluated __every time the function is called__ without the respective parameter.
+### 4. Objects: the basics
+#### 4.5 Constructor, operator "new"
 
 ### 5. Data Types
 
@@ -94,6 +98,32 @@ showMessage("Alice"); // Alice: no text given
 
 ### 8. Prototypes, inheritance
 #### 8.1 Prototypal inheritance
+via JS objects' `[[Prototype]]` property, it's either `null` or ref to another object.
+
+To use, `__proto__` is a historical **getter/setter** for `[[Prototype]]`, in modern JS ==> `Object.getPrototypeOf/Object.setPrototypeOf`.
+
+`for...in` loops over both own and inherited keys:
+
+```js
+let animal = { eats: true };
+let rabbit = { jumps: true, __proto__: animal };
+
+// Object.keys only returns own keys
+alert(Object.keys(rabbit)); // jumps
+
+// for..in loops over both own and inherited keys
+for(let prop in rabbit) alert(prop); // jumps, then eats
+
+for(let prop in rabbit) {
+  let isOwn = rabbit.hasOwnProperty(prop);
+  if (isOwn) {
+    alert(`Our: ${prop}`); // Our: jumps
+  } else {
+    alert(`Inherited: ${prop}`); // Inherited: eats
+  }
+}
+```
+
 #### 8.2 F.prototype
 
 
@@ -109,3 +139,4 @@ dynamic
 * script
 * binding, applying
 * F.prototype
+* any object can be 
