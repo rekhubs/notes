@@ -1,6 +1,14 @@
 
+
+## quick service info check
+e.g. cat api, plugins
+## data interaction
+
+
+
 ### search substring contains special characters 
 e.g. search for documents whose particular field contains `333/KK`. a match can be `XXAA/22333/KKLLL`.
+
 
 1. mapping the field: `keyword` tokenizer + `lowercase` filter
 
