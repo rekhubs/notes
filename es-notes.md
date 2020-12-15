@@ -4,7 +4,10 @@ useful refs: \
 https://github.com/dzharii/awesome-elasticsearch
 
 ## quick service info check
-e.g. cat api, plugins
+e.g. cat api, plugins \
+a list of GUI tools, plugins:  https://www.slant.co/topics/11537/~elasticsearch-gui-clients \
+current --> https://github.com/cars10/elasticvue
+
 ## data interaction
 
 
