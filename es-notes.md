@@ -1,5 +1,8 @@
 
 
+useful refs: \
+https://github.com/dzharii/awesome-elasticsearch
+
 ## quick service info check
 e.g. cat api, plugins
 ## data interaction
