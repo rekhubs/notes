@@ -18,6 +18,8 @@ progress: chapter 2, 8 finished, on chapter 7 <br/><br/>
   - [4.5 Constructor, operator "new"](#45-constructor-operator-new)
 - [5. Data Types](#5-data-types)
 - [6. Advanced working with functions](#6-advanced-working-with-functions)
+  - [6.2 Rest parameters and spread syntax](#62-rest-parameters-and-spread-syntax)
+  - [6.3 Variable scope, closure](#63-variable-scope-closure)
 - [7. Object properties configuration](#7-object-properties-configuration)
   - [7.1 Property flags and descriptors](#71-property-flags-and-descriptors)
 - [8. Prototypes, inheritance](#8-prototypes-inheritance)
@@ -25,7 +27,7 @@ progress: chapter 2, 8 finished, on chapter 7 <br/><br/>
   - [8.2 F.prototype](#82-fprototype)
   - [8.3 Native prototypes](#83-native-prototypes)
   - [8.4 Prototype methods, objects without `__proto__`](#84-prototype-methods-objects-without-__proto__)
-- [10. Classes](#10-classes)
+- [9. Classes](#9-classes)
 
 
 ### 2. JavaScript Fundamentals
@@ -109,6 +111,53 @@ Return from constructors (usually not used):
 ### 5. Data Types
 
 ### 6. Advanced working with functions
+#### 6.2 Rest parameters and spread syntax
+Rest parameters ...
+```js
+function sumAll(...args) { // args is the name for the array
+  let sum = 0;
+  for (let arg of args) sum += arg;
+  return sum;
+}
+```
+**The rest parameters must be at the end.**
+
+Spread syntax
+```js
+let arr = [3, 5, 1];
+alert( Math.max(...arr) ); // 5 (spread turns array into a list of arguments)
+```
+Copy an array/object
+```js
+let obj = { a: 1, b: 2, c: 3 };
+let objCopy = { ...obj }; // spread the object into a list of parameters
+                          // then return the result in a new object
+```
+
+#### 6.3 Variable scope, closure
+
+* js runtime can't access variables in lower level code blocks `{...}` (*unless the old `var`*);
+* but can access variables/functions outside current code block;
+
+closure
+Taking #2, define an anonymous function `c` at level 2, in which (level 3) it consumes resources at level 2; return `c`. When `c` is returned to level 1 and called, it runs with (reads and updates) resources stored at level 2.
+
+```js
+function makeCounter() {
+  let count = 0;
+  return function() {
+    return count++;
+  };
+}
+let counter = makeCounter();
+
+alert( counter() ); // 0
+alert( counter() ); // 1
+```
+
+[Closure (wiki)](https://en.wikipedia.org/wiki/Closure_(computer_programming))
+>  In programming languages, a closure, also lexical closure or function closure, is a technique for implementing lexically scoped name binding in a language with first-class functions. Operationally, a closure is a record storing a function together with an environment.
+
 
 ### 7. Object properties configuration
 #### 7.1 Property flags and descriptors
@@ -203,7 +252,7 @@ The `__proto__` is considered outdated and somewhat deprecated (in browser-only 
 [# brief history](https://javascript.info/prototype-methods#brief-history)
 
 
-### 10. Classes
+### 9. Classes
 
 
 
@@ -214,7 +263,8 @@ The `__proto__` is considered outdated and somewhat deprecated (in browser-only 
 some other notes
 
 dynamic
-* script
+* scripting
+* closure, flexible customizable reusable code
 * binding, applying
 * F.prototype
-* any object can be 
+* any object can be a parent, inherite 
