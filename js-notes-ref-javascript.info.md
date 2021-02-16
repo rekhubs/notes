@@ -3,7 +3,7 @@ notes reading [https://javascript.info/](https://javascript.info/) (project on G
 The tutorial has 14 chapters for part 1 (21 Aug 2020). \
 *see also, some useful materials: [MDN JS docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)*
 
-progress: chapter 2, 8 finished, on chapter 7 <br/><br/>
+progress: chapter 2, 7, 8 finished, on chapter 6 <br/><br/>
 
 
 
@@ -161,6 +161,27 @@ alert( counter() ); // 1
 
 ### 7. Object properties configuration
 #### 7.1 Property flags and descriptors
+`writable`; `enumerable` - loopable; `configurable` - can delete value, or change the 2 previous flags.
+
+```js
+let user = { name: "John" };
+// view
+let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
+alert( JSON.stringify(descriptor, null, 2 ) );
+/* property descriptor:
+{
+  "value": "John",
+  "writable": true,
+  "enumerable": true,
+  "configurable": true
+}
+*/
+// update
+Object.defineProperty(user, "name", {
+  writable: false
+});
+```
+
 ### 8. Prototypes, inheritance
 #### 8.1 Prototypal inheritance
 via JS objects' `[[Prototype]]` property, it's either `null` or ref to another object.
@@ -191,7 +212,7 @@ for(let prop in rabbit) {
 
 #### 8.2 F.prototype
 
-Setting the `"prototype"` property of a constructor function `F` to an object `a`, so that when a new object is created with `new F()`, its `[[Prototype]]` is set to `a`.
+Setting the `"prototype"` property of a constructor function `F` to an object `a`, so that when a new object is created with `new F()`, its `[[Prototype]]` is set to `a`. *see also [#4.5 Constructor, operator "new"](#45-constructor-operator-new)*.
 
 ```js
 let animal = {
@@ -267,4 +288,4 @@ dynamic
 * closure, flexible customizable reusable code
 * binding, applying
 * F.prototype
-* any object can be a parent, inherite 
+* any object can be a parent, inherited 
