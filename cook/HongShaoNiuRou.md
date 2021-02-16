@@ -1,4 +1,4 @@
-无敌小高姐的食谱
+无敌小高姐的食谱 [原视频YouTube](https://www.youtube.com/watch?v=Q8kLOh1s1d0)
 * 洗肉。切肉 - 中，顺纹理
 * 焯水 - 煮沸，去浮沫 - 起
 ---
