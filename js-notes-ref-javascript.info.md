@@ -20,6 +20,11 @@ progress: chapter 2, 7, 8 finished, on chapter 6 <br/><br/>
 - [6. Advanced working with functions](#6-advanced-working-with-functions)
   - [6.2 Rest parameters and spread syntax](#62-rest-parameters-and-spread-syntax)
   - [6.3 Variable scope, closure](#63-variable-scope-closure)
+  - [6.4 The old "var"](#64-the-old-var)
+  - [6.5 Global object](#65-global-object)
+  - [6.6 Function object, NFE](#66-function-object-nfe)
+  - [6.7 The "new Function" syntax](#67-the-new-function-syntax)
+  - [6.9 Decorators and forwarding, call/apply](#69-decorators-and-forwarding-callapply)
 - [7. Object properties configuration](#7-object-properties-configuration)
   - [7.1 Property flags and descriptors](#71-property-flags-and-descriptors)
 - [8. Prototypes, inheritance](#8-prototypes-inheritance)
@@ -136,7 +141,7 @@ let objCopy = { ...obj }; // spread the object into a list of parameters
 
 #### 6.3 Variable scope, closure
 
-* js runtime can't access variables in lower level code blocks `{...}` (*unless the old `var`*);
+* js runtime can't access variables in lower level code blocks `{...}` (*except the old [var](#64-the-old-var)*);
 * but can access variables/functions outside current code block;
 
 closure
@@ -158,6 +163,43 @@ alert( counter() ); // 1
 [Closure (wiki)](https://en.wikipedia.org/wiki/Closure_(computer_programming))
 >  In programming languages, a closure, also lexical closure or function closure, is a technique for implementing lexically scoped name binding in a language with first-class functions. Operationally, a closure is a record storing a function together with an environment.
 
+#### 6.4 The old "var"
+1. “var” has no block scope;
+2. “var” tolerates redeclarations;
+3. “var” variables can be declared below their use
+
+#### 6.5 Global object
+* browser - `window` -> `globalThis` 
+* nodejs - `global`
+
+#### 6.6 Function object, NFE
+In JavaScript, functions are objects. have properties like `name`, `length` (number of function parameters).
+```js
+function many(a, b, ...more) {}
+alert(many.name); // many
+alert(many.length); // 2
+```
+Named Function Expression, or NFE, is a term for Function Expressions that have a name.
+
+#### 6.7 The "new Function" syntax
+0 args to n, plain string for `functionBody`. ...created literally from a string, that is passed at run time.
+```js
+let func = new Function ([arg1, arg2, ...argN], functionBody);
+```
+
+Closure
+```js
+function getFunc() {
+  let value = "test";
+  let func = new Function('alert(value)');
+//let func = function() { alert(value); };  // <-- compare
+  return func;
+}
+getFunc()(); // error: value is not defined
+```
+because if `new Function` had access to outer variables, it would have problems with minifiers.
+
+#### 6.9 Decorators and forwarding, call/apply
 
 ### 7. Object properties configuration
 #### 7.1 Property flags and descriptors
@@ -289,3 +331,4 @@ dynamic
 * binding, applying
 * F.prototype
 * any object can be a parent, inherited 
+* `new Function()` to create functions at run time - *secure? injection?...*
