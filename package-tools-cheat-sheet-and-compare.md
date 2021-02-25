@@ -4,7 +4,7 @@
 | ------------- |:-------------:| -----:|--------|---|--------|
 | install      |i  |   | | | |
 | list      |ls  |   | | | |
-| view, inspect      |    view    |   | | | |
+| view, inspect      |    v, view, info, show    |   | | | |
 | search |   s      |     | | | |
 | uninstall      |uninstall, un, remove, rm, r  |   | | | |
 | xxx      |  |   | | | |
