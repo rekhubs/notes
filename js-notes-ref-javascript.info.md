@@ -25,6 +25,9 @@ progress: chapter 2, 7, 8 finished, on chapter 6 <br/><br/>
   - [6.6 Function object, NFE](#66-function-object-nfe)
   - [6.7 The "new Function" syntax](#67-the-new-function-syntax)
   - [6.9 Decorators and forwarding, call/apply](#69-decorators-and-forwarding-callapply)
+    - [func.call](#funccall)
+    - [vs. func.apply](#vs-funcapply)
+    - [Decorators](#decorators)
 - [7. Object properties configuration](#7-object-properties-configuration)
   - [7.1 Property flags and descriptors](#71-property-flags-and-descriptors)
 - [8. Prototypes, inheritance](#8-prototypes-inheritance)
@@ -200,6 +203,37 @@ getFunc()(); // error: value is not defined
 because if `new Function` had access to outer variables, it would have problems with minifiers.
 
 #### 6.9 Decorators and forwarding, call/apply
+
+##### func.call
+```js
+function sayHi() { alert(this.name); }
+
+let user = { name: "John" };
+let admin = { name: "Admin" };
+
+// use call to pass different objects as "this"
+sayHi.call( user ); // John
+sayHi.call( admin ); // Admin
+```
+
+##### vs. func.apply
+`func.call(context, 1, 2, 3)` <==> `func.apply(context, [1, 2, 3])` \
+or \
+`func.call(context, ...[1, 2, 3])`
+
+
+##### Decorators
+
+read original example: https://javascript.info/call-apply-decorators#transparent-caching \
+general decorator pattern: https://github.com/kamranahmedse/design-patterns-for-humans#-decorator
+
+<u>more based on original examples</u>
+
+* `cachingDecorator` creates a closure
+* when it is used to decorate a function, the function gains a scope of closure (`cachingDecorator`) which has its own `cache` (fields/properties).
+*  which makes it possible to decorate multiple functions without value-cache-mess.
+
+![extra-testing-with-caching-decorator](./js-notes-scripts/6.9.png)
 
 ### 7. Object properties configuration
 #### 7.1 Property flags and descriptors
