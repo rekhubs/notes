@@ -214,6 +214,7 @@ sayHi.call( admin ); // Admin
 ```
 
 **vs. func.apply**
+
 `func.call(context, 1, 2, 3)` <==> `func.apply(context, [1, 2, 3])` \
 or \
 `func.call(context, ...[1, 2, 3])`
@@ -224,11 +225,11 @@ or \
 read the original example: https://javascript.info/call-apply-decorators#transparent-caching \
 general decorator pattern: https://github.com/kamranahmedse/design-patterns-for-humans#-decorator
 
-**extra tweaks based on the original examples**
+**some more tweaks and stuff based on the original examples**
 
 * `cachingDecorator` creates a closure
 * when it is used to decorate a function, the function gains a scope of closure (`cachingDecorator`) which has its own `cache` (fields/properties).
-*  which makes it possible to decorate multiple functions without value-cache-mess.
+*  which makes it possible to decorate different functions without cache-value-mess.
 
 ![extra-testing-with-caching-decorator](./js-notes-scripts/6.9.png)
 
