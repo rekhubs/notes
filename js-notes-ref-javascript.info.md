@@ -35,6 +35,8 @@ progress: chapter 2, 6, 7, 8 finished, on chapter x <br/><br/>
   - [8.3 Native prototypes](#83-native-prototypes)
   - [8.4 Prototype methods, objects without `__proto__`](#84-prototype-methods-objects-without-__proto__)
 - [9. Classes](#9-classes)
+- [11. Promises, async/await](#11-promises-asyncawait)
+- [13. Modules](#13-modules)
 
 
 ### 2. JavaScript Fundamentals
@@ -42,22 +44,11 @@ progress: chapter 2, 6, 7, 8 finished, on chapter x <br/><br/>
 `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the “modern” way.
 
 #### 2.7 Type Conversions
-* String Conversion  `let name = true; String(name) // "true"`
-
-
-```js
-let name = true; String(name)  // --> "true"
-```
-* Numeric Conversion
-```js 
-Number("   123   ")  // --> 123
-```
-* Boolean Conversion 
-
+* String Conversion:  `let name = true; String(name) // -> "true"`
+* Numeric Conversion: `Number("   123   ")  // -> 123`
+* Boolean Conversion: `Boolean("0")  // -> true`
 Values that are intuitively “empty”, like `0`, an empty string, `null`, `undefined`, and `NaN`, become false. Other values become true.
-```js 
-Boolean("0")  // --> true
-```
+
 #### 2.8 Basic operators, maths
 * Math: Exponentiation `**`
 ```js 
@@ -375,6 +366,8 @@ The `__proto__` is considered outdated and somewhat deprecated (in browser-only 
 
 
 ### 9. Classes
+### 11. Promises, async/await
+### 13. Modules
 
 
 
