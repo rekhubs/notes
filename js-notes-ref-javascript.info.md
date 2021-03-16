@@ -3,7 +3,7 @@ notes reading [https://javascript.info/](https://javascript.info/) (project on G
 The tutorial has 14 chapters for part 1 (21 Aug 2020). \
 *see also, some useful materials: [MDN JS docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)*
 
-progress: chapter 2, 7, 8 finished, on chapter 6 <br/><br/>
+progress: chapter 2, 6, 7, 8 finished, on chapter x <br/><br/>
 
 
 
@@ -25,6 +25,8 @@ progress: chapter 2, 7, 8 finished, on chapter 6 <br/><br/>
   - [6.6 Function object, NFE](#66-function-object-nfe)
   - [6.7 The "new Function" syntax](#67-the-new-function-syntax)
   - [6.9 Decorators and forwarding, call/apply](#69-decorators-and-forwarding-callapply)
+  - [6.10 Function binding](#610-function-binding)
+  - [6.11 Arrow functions revisited](#611-arrow-functions-revisited)
 - [7. Object properties configuration](#7-object-properties-configuration)
   - [7.1 Property flags and descriptors](#71-property-flags-and-descriptors)
 - [8. Prototypes, inheritance](#8-prototypes-inheritance)
@@ -40,7 +42,9 @@ progress: chapter 2, 7, 8 finished, on chapter 6 <br/><br/>
 `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the “modern” way.
 
 #### 2.7 Type Conversions
-* String Conversion
+* String Conversion  `let name = true; String(name) // "true"`
+
+
 ```js
 let name = true; String(name)  // --> "true"
 ```
@@ -232,6 +236,29 @@ general decorator pattern: https://github.com/kamranahmedse/design-patterns-for-
 *  which makes it possible to decorate different functions without cache-value-mess.
 
 ![extra-testing-with-caching-decorator](./js-notes-scripts/6.9.png)
+
+#### 6.10 Function binding
+create a function based on the original, binding context/`this` and first a few arguments to it.
+
+```js
+let user = {
+  firstName: "John",
+  say(phrase) { alert(`${phrase}, ${this.firstName}!`); }
+};
+
+let say = user.say.bind(user);
+say("Hello"); // Hello, John ("Hello" argument is passed to say)
+```
+The exotic bound function object returned by f.bind(...) remembers the context and arguments **only at creation time**. A function cannot be re-bound.
+
+**Partial functions** - new function by fixing some parameters of the existing one.
+
+#### 6.11 Arrow functions revisited
+* have no “this”. If this is accessed, it is taken from the outside.
+* thus arrow functions can't be used as constructors, can’t be called with `new`.
+* have no “arguments”
+
+
 
 ### 7. Object properties configuration
 #### 7.1 Property flags and descriptors
