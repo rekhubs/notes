@@ -3,7 +3,7 @@ notes reading [https://javascript.info/](https://javascript.info/) (project on G
 The tutorial has 14 chapters for part 1 (21 Aug 2020). \
 *see also, some useful materials: [MDN JS docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)*
 
-progress: chapter 2, 6, 7, 8 finished, on chapter x <br/><br/>
+progress: chapter 2, 6, 7, 8 finished, on chapter 13 <br/><br/>
 
 
 
@@ -37,6 +37,8 @@ progress: chapter 2, 6, 7, 8 finished, on chapter x <br/><br/>
 - [9. Classes](#9-classes)
 - [11. Promises, async/await](#11-promises-asyncawait)
 - [13. Modules](#13-modules)
+  - [13.1 Modules, introduction](#131-modules-introduction)
+  - [13.2 Export and Import](#132-export-and-import)
 
 
 ### 2. JavaScript Fundamentals
@@ -368,6 +370,67 @@ The `__proto__` is considered outdated and somewhat deprecated (in browser-only 
 ### 9. Classes
 ### 11. Promises, async/await
 ### 13. Modules
+
+#### 13.1 Modules, introduction
+AMD, CommonJS, UMD until 2015 ES6, introduced in the standard: \
+A module is just a file. One script is one module. As simple as that.
+
+* `export` keyword labels variables and functions that should be accessible from outside the current module.
+* `import` allows the import of functionality from other modules.
+
+```html
+<!doctype html>
+<script type="module">
+  import {sayHi} from './say.js';
+  document.body.innerHTML = sayHi('John');
+</script>
+```
+
+**Always “use strict”**
+
+**Module-level scope** \
+Each module has its own top-level scope. In other words, top-level variables and functions from a module are not seen in other scripts.
+
+**A module code is evaluated only the first time when imported**
+
+The object **`import.meta`** contains the information about the current module.
+
+**In a module, “this” is undefined**
+```html
+<script type="module">
+  alert(this); // undefined
+</script>
+```
+
+------ **Browser-specific** -------
+
+**Module scripts are deferred**
+* downloading external module scripts `<script type="module" src="...">` doesn’t block HTML processing, they load in parallel with other resources.
+* module scripts wait until the HTML document is fully ready (even if they are tiny and load faster than HTML), and then run.
+* relative order of scripts is maintained: scripts that go first in the document, execute first.
+
+**Async works on inline scripts**
+
+* async
+  * non-module
+    * inline scripts - no effect  
+    * external / `src` sourced scripts - Async scripts run immediately when ready, independently of other scripts or the HTML document. (*1.1.2*)
+  * module
+    * inline - **works as well!** as *1.1.2*
+    * external - works of course, **and** 
+      * external scripts with the same src run only once
+  
+```html
+<!-- all dependencies are fetched (analytics.js), and the script runs -->
+<!-- doesn't wait for the document or other <script> tags -->
+<script async type="module">
+  import {counter} from './analytics.js';
+  counter.count();
+</script>
+```
+
+#### 13.2 Export and Import
+
 
 
 
