@@ -3,7 +3,7 @@ notes reading [https://javascript.info/](https://javascript.info/) (project on G
 The tutorial has 14 chapters for part 1 (21 Aug 2020). \
 *see also, some useful materials: [MDN JS docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)*
 
-progress: chapter 2, 6, 7, 8 finished, on chapter 13 <br/><br/>
+progress: chapter 2, 6, 7, 8, 13 finished, on chapter 4 <br/><br/>
 
 
 
@@ -15,6 +15,7 @@ progress: chapter 2, 6, 7, 8 finished, on chapter 13 <br/><br/>
   - [2.13 Loops: while and for](#213-loops-while-and-for)
   - [2.15 Functions](#215-functions)
 - [4. Objects: the basics](#4-objects-the-basics)
+  - [4.1 Objects](#41-objects)
   - [4.5 Constructor, operator "new"](#45-constructor-operator-new)
 - [5. Data Types](#5-data-types)
 - [6. Advanced working with functions](#6-advanced-working-with-functions)
@@ -39,6 +40,7 @@ progress: chapter 2, 6, 7, 8 finished, on chapter 13 <br/><br/>
 - [13. Modules](#13-modules)
   - [13.1 Modules, introduction](#131-modules-introduction)
   - [13.2 Export and Import](#132-export-and-import)
+  - [13.3 Dynamic imports](#133-dynamic-imports)
 
 
 ### 2. JavaScript Fundamentals
@@ -97,7 +99,21 @@ function showMessage(from, text = "no text given") {
 showMessage("Alice"); // Alice: no text given
 ```
 ... can use a more complex expression, which will be evaluated __every time the function is called__ without the respective parameter.
+
 ### 4. Objects: the basics
+
+#### 4.1 Objects
+
+**Computed properties** - use square brackets in an object literal, when creating an object
+
+```js
+let fruit = prompt("Which fruit to buy?", "apple");
+let bag = {
+  [fruit]: 5, // the name of the property is taken from the variable fruit
+};
+alert( bag.apple ); // 5 if fruit="apple"
+```
+
 #### 4.5 Constructor, operator "new"
 When a function is executed with new, it does the following steps:
 1. A new empty object is created and assigned to `this`.
@@ -430,6 +446,34 @@ The object **`import.meta`** contains the information about the current module.
 ```
 
 #### 13.2 Export and Import
+
+**Export default**
+
+Modules provide a special `export default` (“the default export”) syntax to make the “one thing per module” way look better. one export default per file.
+
+Named export |	Default export
+-- | --
+`export class User {...}`	| `export default class User {...}`
+`import {User} from ...` |	`import User from ...`
+
+#### 13.3 Dynamic imports
+
+```js
+import ... from getModuleName(); 
+// Error, only from "string" is allowed
+if(...) {  import ...; }
+// Error, not allowed!
+{ import ...; }
+// Error, we can't put import in any block
+```
+
+**The `import()` expression**
+
+```js
+let {hi, bye} = await import('./say.js');
+hi();
+bye();
+```
 
 
 
