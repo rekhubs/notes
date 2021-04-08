@@ -23,3 +23,27 @@ generates HAL representation (`application/hal+json`):
 }
 ```
 
+### 2. Building links with Spring HATOEAS
+
+#### xx
+#### Representation model assembler
+Extend Spring HATEOAS' `RepresentationModelAssemblerSupport` to 
+* Instantiation of the model class
+* Adding a link with a rel of self pointing to the resource that gets rendered
+
+```java
+class PersonModelAssembler extends RepresentationModelAssemblerSupport<Person, PersonModel> {
+
+  public PersonModelAssembler() {
+    super(PersonController.class, PersonModel.class);
+  }
+
+  @Override
+  public PersonModel toModel(Person person) {
+
+    PersonModel resource = createResource(person);
+    // … do further mapping
+    return resource;
+  }
+}
+```
