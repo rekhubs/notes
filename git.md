@@ -1,0 +1,5 @@
+
+* git revert
+
+
+* git pull
