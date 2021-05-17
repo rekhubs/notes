@@ -16,6 +16,7 @@ progress: chapter 2, 6, 7, 8, 13 finished, on chapter 4 <br/><br/>
   - [2.15 Functions](#215-functions)
 - [4. Objects: the basics](#4-objects-the-basics)
   - [4.1 Objects](#41-objects)
+  - [4.2 Object references and copying](#42-object-references-and-copying)
   - [4.5 Constructor, operator "new"](#45-constructor-operator-new)
 - [5. Data Types](#5-data-types)
 - [6. Advanced working with functions](#6-advanced-working-with-functions)
@@ -114,6 +115,31 @@ let bag = {
 alert( bag.apple ); // 5 if fruit="apple"
 ```
 
+**Property value shorthand**
+```js
+function makeUser(name, age) {
+  return {
+    name, // same as name: name
+    age,  // same as age: age
+    // ...
+  };
+}
+let user = makeUser("John", 30);
+```
+
+**Property existence test, “in” operator**
+```js
+let user = { name: "John", age: 30, test: undefined };
+alert( "age" in user ); // true, user.age exists
+alert( user.test ); // it's undefined, so - no such property?
+alert( "test" in user ); // true, the property does exist!
+```
+
+#### 4.2 Object references and copying
+One of the fundamental differences of objects versus primitives is that objects are stored and copied “by reference”, whereas primitive values: strings, numbers, booleans, etc – are always copied “as a whole value”.
+
+Use `Object.assign(target, source)` or [spread syntax](#62-rest-parameters-and-spread-syntax) to clone objects.
+
 #### 4.5 Constructor, operator "new"
 When a function is executed with new, it does the following steps:
 1. A new empty object is created and assigned to `this`.
@@ -150,6 +176,7 @@ Copy an array/object
 let obj = { a: 1, b: 2, c: 3 };
 let objCopy = { ...obj }; // spread the object into a list of parameters
                           // then return the result in a new object
+                          // same as Object.assign({}, obj)
 ```
 
 #### 6.3 Variable scope, closure
