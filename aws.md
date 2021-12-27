@@ -26,7 +26,7 @@ https://aws.amazon.com/getting-started/guides/deploy-webapp-decision/
 * 2 - with containers
     * Lightsail
     * ECS
-    * C
+    * EKS
 * 3 - on VM
     * Lightsail
     * EC2
