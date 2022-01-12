@@ -44,7 +44,7 @@ Amazon Simple Storage Service (Amazon S3)
 * Key - id within Bucket, "bucket + key + version"
 
 #### Dev
-request using SDK with AWS account
+request using SDK with AWS account \
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/AuthUsingAcctOrUserCredentials.html
 
 auth - like ssh, credentials saved in local `~/.aws` dir
