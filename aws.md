@@ -43,7 +43,9 @@ Amazon Simple Storage Service (Amazon S3)
 * Object - entities stored in Amazon S3. consist of object data and metadata (name-value, e.g. HTTP meta `Content-Type`)
 * Key - id within Bucket, "bucket + key + version"
 
-#### Dev
+#### Dev 
+*to be updated depending on work*
+
 request using SDK with AWS account \
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/AuthUsingAcctOrUserCredentials.html
 
