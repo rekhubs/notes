@@ -17,8 +17,7 @@ terms
 * EC2 - Elastic Compute Cloud
 * S3 - Simple Storage Service
 
-### get started
-#### compute
+### compute
 https://aws.amazon.com/getting-started/guides/deploy-webapp-decision/
 
 * 1 - just code
@@ -34,12 +33,22 @@ https://aws.amazon.com/getting-started/guides/deploy-webapp-decision/
     * Lightsail
     * EC2
 
-#### storage
+### storage
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html
 
 Amazon Simple Storage Service (Amazon S3)
 
-Concepts
+#### Concepts
 * Bucket - container to storage S3 Objects
 * Object - entities stored in Amazon S3. consist of object data and metadata (name-value, e.g. HTTP meta `Content-Type`)
 * Key - id within Bucket, "bucket + key + version"
+
+#### Dev
+request using SDK with AWS account
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/AuthUsingAcctOrUserCredentials.html
+
+auth - like ssh, credentials saved in local `~/.aws` dir
+
+other content like cli, REST, see directory: \
+![image](https://user-images.githubusercontent.com/5567035/149057331-64c4c632-655c-4292-bcd7-b0eca54d34de.png)
+
