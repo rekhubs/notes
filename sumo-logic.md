@@ -19,3 +19,6 @@ _sourcecategory=apache | parse "* --" as src_ip | count by src_ip | sort _count
 
 
 # collect
+
+Field Extraction Rules (FERs) - fields parsed at ingestion time rather than query \
+https://help.sumologic.com/Manage/Field-Extractions
