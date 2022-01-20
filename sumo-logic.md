@@ -27,9 +27,18 @@ Parse fields out:
 * `_sourceCategory=apache | parse "* " as src_IP`
 * `_sourcehost=vpn3000 | parse "Group  [*] User [*]" as type, user`
 
+## Search Query Language
+*specs, some detailed, json, lookup, save* \
+https://help.sumologic.com/05Search/Search-Query-Language
+
+## Lookup Tables
+*? to be estimated and read* \
+https://help.sumologic.com/05Search/Lookup_Tables
+
 ## others
 * best practices - https://help.sumologic.com/05Search/Get-Started-with-Search/How-to-Build-a-Search/Best-Practices%3A-Search-Rules-to-Live-By
-* cheatsheet - 
+* cheatsheet - https://help.sumologic.com/05Search/Search-Cheat-Sheets/General-Search-Examples-Cheat-Sheet
+* LogReduce - algorithm uses fuzzy logic to cluster messages together based on string and pattern similarity
 
 
 # collect
