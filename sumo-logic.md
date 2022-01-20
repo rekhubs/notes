@@ -15,7 +15,21 @@ _sourcecategory=apache | parse "* --" as src_ip | count by src_ip | sort _count
 ```
 ![image](https://user-images.githubusercontent.com/5567035/150270831-e69d2b72-f60d-4a3a-971e-8b2ba0d37ae9.png)
 
+## keyword
 
+Syntax
+```
+_sourceCategory="sales_services_g1" keyword *keyword* OR keyword NOT keyword
+```
+## Search Syntax
+Parse fields out:
+* `* | parse regex "(?<src_IP>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"`
+* `_sourceCategory=apache | parse "* " as src_IP`
+* `_sourcehost=vpn3000 | parse "Group  [*] User [*]" as type, user`
+
+## others
+* best practices - https://help.sumologic.com/05Search/Get-Started-with-Search/How-to-Build-a-Search/Best-Practices%3A-Search-Rules-to-Live-By
+* cheatsheet - 
 
 
 # collect
