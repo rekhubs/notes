@@ -20,3 +20,9 @@ concepts
 ![image](https://user-images.githubusercontent.com/5567035/149231125-5666f765-0129-471a-b7aa-eeee647a3ab7.png)
 
 
+# 3. Design
+https://kafka.apache.org/documentation/#design
+
+
+
+
