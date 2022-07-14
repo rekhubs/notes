@@ -1,4 +1,7 @@
 
+### grep
+* only get matched texts: `-o`
+
 ### top
 * highlight **column** - `x`
 * highlight **column** background - `b`
