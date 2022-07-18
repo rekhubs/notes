@@ -1,6 +1,16 @@
 
 ### grep
-* only get matched texts: `-o`
+* only get matched texts: `-o`, `--only-matching`
+* ignore case: `-i`
+* invert match, select non-matching lines: `-v`, `--invert-match`
+* regex / user patterns: `-e`. More see [Pattern Syntax](https://man.archlinux.org/man/grep.1.en#Pattern_Syntax) and [REGULAR EXPRESSIONS](https://man.archlinux.org/man/grep.1.en#REGULAR_EXPRESSIONS)
+    * **Basic**: `-G` (**default**)
+    *  **Extended**: `-E`
+    *  **Pearl**-compatible: `-P`
+    *  no regex, fixed strings: `-F`
+
+https://man.archlinux.org/man/grep.1.en \
+https://www.linode.com/docs/guides/how-to-grep-for-text-in-files/
 
 ### top
 * highlight **column** - `x`
