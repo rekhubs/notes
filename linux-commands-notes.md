@@ -1,4 +1,6 @@
 
+### find
+
 ### grep
 * only get matched texts: `-o`, `--only-matching`
 * ignore case: `-i`
@@ -11,6 +13,8 @@
 
 https://man.archlinux.org/man/grep.1.en \
 https://www.linode.com/docs/guides/how-to-grep-for-text-in-files/
+
+### netstat
 
 ### top
 * highlight **column** - `x`
