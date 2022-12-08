@@ -1,14 +1,16 @@
 
 ### find
 * exclude some dirs?
-* find files with keywords inside the files? like in notepad++
 * 
 see also - https://github.com/sharkdp/fd
 
 ### grep
 * only get matched texts: `-o`, `--only-matching`
 * ignore case: `-i`
+* recursive: `-r` or `-R`
 * invert match, select non-matching lines: `-v`, `--invert-match`
+* exclude files: `--exclude=\*.o`
+* exclude dirs: `--exclude-dir={dir1,dir2,*.dst}`
 * regex / user patterns: `-e`. More see [Pattern Syntax](https://man.archlinux.org/man/grep.1.en#Pattern_Syntax) and [REGULAR EXPRESSIONS](https://man.archlinux.org/man/grep.1.en#REGULAR_EXPRESSIONS)
     * **Basic**: `-G` (**default**)
     *  **Extended**: `-E`
