@@ -48,3 +48,5 @@ https://linux.die.net/man/1/top <br/>
 https://www.binarytides.com/linux-top-command/  <br/>
 https://www.tecmint.com/12-top-command-examples-in-linux/
 
+### xargs
+* multiple: `find . -name .name | xargs -i sh -c 'cat {}; echo'`
