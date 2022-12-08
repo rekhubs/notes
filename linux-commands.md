@@ -3,6 +3,7 @@
 * exclude some dirs?
 * find files with keywords inside the files? like in notepad++
 * 
+see also - https://github.com/sharkdp/fd
 
 ### grep
 * only get matched texts: `-o`, `--only-matching`
