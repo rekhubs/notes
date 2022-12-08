@@ -1,7 +1,13 @@
 
 ### find
+* syntax: `$ find [-H|-L] path... [operand_expression...]`
+* file: `find . -name note.txt`
+* dir: `-type d`
 * exclude some dirs?
-* 
+
+https://www.wikiwand.com/en/Find_(Unix) \
+https://www.tecmint.com/35-practical-examples-of-linux-find-command/ \
+
 see also - https://github.com/sharkdp/fd
 
 ### grep
