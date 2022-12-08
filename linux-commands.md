@@ -1,5 +1,8 @@
 
 ### find
+* exclude some dirs?
+* find files with keywords inside the files? like in notepad++
+* 
 
 ### grep
 * only get matched texts: `-o`, `--only-matching`
