@@ -2,7 +2,15 @@
 ### find
 * syntax: `$ find [-H|-L] path... [operand_expression...]`
 * file: `find . -name note.txt`
+* case: `find . -iname 'note.*'`
 * dir: `-type d`
+* operators
+   * `( expr )`
+   * `! expr`
+   * and: `expr1 expr2` or `expr1 -a expr2`
+   * or: `expr1 -o expr2`
+* by size
+* by time: -mtime, -ctime, -actime
 * exclude some dirs?
 
 https://www.wikiwand.com/en/Find_(Unix) \
