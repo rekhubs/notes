@@ -34,6 +34,9 @@ see also - https://github.com/sharkdp/fd
 https://man.archlinux.org/man/grep.1.en \
 https://www.linode.com/docs/guides/how-to-grep-for-text-in-files/
 
+### ssh
+* verbose: `-vvv`
+
 ### netstat
 
 ### top
