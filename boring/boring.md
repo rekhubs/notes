@@ -32,6 +32,7 @@ Ref
 * https://www.wikiwand.com/en/Palme_d'Or
 * https://www.wikiwand.com/en/Cinema_of_Yugoslavia
 * https://www.douban.com/search?cat=1002&q=%E5%8D%97%E6%96%AF%E6%8B%89%E5%A4%AB%E7%94%B5%E5%BD%B1
+* https://easterneuropeanmovies.com/country/yugoslavia
 * https://www.imdb.com/search/title/?country_of_origin=XYU
 
 
