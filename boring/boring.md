@@ -13,7 +13,7 @@
 ### 1.2 xixixixixi
 
 ## tags
-`reading`, `active`
+`reading`, `active`, `tech`
 
 
 ### 2023-12
