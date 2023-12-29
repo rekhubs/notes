@@ -18,6 +18,9 @@ progress: chapter 2, 6, 7, 8, 13 finished, on chapter 4 <br/><br/>
   - [4.1 Objects](#41-objects)
   - [4.2 Object references and copying](#42-object-references-and-copying)
   - [4.5 Constructor, operator "new"](#45-constructor-operator-new)
+  - [4.6 Optional chaining '?.' - gem](#46-optional-chaining----gem)
+  - [4.7 Symbol type](#47-symbol-type)
+  - [4.8 Object to primitive conversion](#48-object-to-primitive-conversion)
 - [5. Data Types](#5-data-types)
 - [6. Advanced working with functions](#6-advanced-working-with-functions)
   - [6.2 Rest parameters and spread syntax](#62-rest-parameters-and-spread-syntax)
@@ -143,14 +146,67 @@ Use `Object.assign(target, source)` or [spread syntax](#62-rest-parameters-and-s
 #### 4.5 Constructor, operator "new"
 When a function is executed with new, it does the following steps:
 1. A new empty object is created and assigned to `this`.
-2. The function body executes. Usually it modifies `this, adds new properties to it.
+2. The function body executes. Usually it modifies `this`, adds new properties to it.
 3. The value of this is returned.
+
+```js
+function User(name) {
+  // this = {};  (implicitly)
+
+  // add properties to this
+  this.name = name;
+  this.isAdmin = false;
+
+  // return this;  (implicitly)
+}
+```
 
 Constructor mode test: `new.target` property: `undefined` or the function itself.
 
 Return from constructors (usually not used):
 * If `return` is called with an object, then the object is returned instead of `this`.
 * **If `return` is called with a primitive, it’s ignored.**
+
+#### 4.6 Optional chaining '?.' - gem
+
+The optional chaining `?.` is **not an operator, but a special syntax construct**, that also works with functions and square brackets.
+
+For example, `?.()` is used to call a function that may not exist.
+
+```js
+let userAdmin = {
+  admin() { alert("I am admin"); }
+};
+let userGuest = {};
+userGuest.admin?.(); // nothing (no such method)
+```
+
+Similarly, `obj?.[prop]` – returns `obj[prop]` if `obj` exists, otherwise `undefined`.
+
+#### 4.7 Symbol type
+
+A “symbol” represents a unique identifier. Different even with same description.
+
+```js
+let id1 = Symbol("id");
+let id2 = Symbol("id");
+alert(id1 == id2); // false
+```
+* used for "hidden" properties
+* not looped over `for..in`
+* useful when reusing foreign code, define you own properties that won't conflict with native ones
+
+```js
+let user = { // belongs to another code
+  name: "John"
+};
+let id = Symbol("id");
+user[id] = 1;
+alert( user[id] ); // we can access the data using the symbol as the key
+```
+
+#### 4.8 Object to primitive conversion
+
 
 ### 5. Data Types
 
