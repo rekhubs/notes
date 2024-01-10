@@ -20,7 +20,7 @@
 #### 2023-12
 
 * When Father Was Away on Business / 1985 / https://movie.douban.com/subject/1303056/
-  * asdfa
+  * 南斯拉夫伤痕文学，家庭变迁史切片 [Scar literature](https://www.wikiwand.com/en/Scar_literature)
 * Underground / 1995 / https://movie.douban.com/subject/1292206/
 * Savage Bridege / 1969 / https://movie.douban.com/subject/1305697/
 * Walter Defends Sarajevo / 1972 / https://movie.douban.com/subject/1291860/
@@ -36,5 +36,6 @@ Ref
 * https://www.douban.com/search?cat=1002&q=%E5%8D%97%E6%96%AF%E6%8B%89%E5%A4%AB%E7%94%B5%E5%BD%B1
 * https://easterneuropeanmovies.com/country/yugoslavia
 * https://www.imdb.com/search/title/?country_of_origin=XYU
+* my list - https://www.douban.com/doulist/157275698/
 
 
