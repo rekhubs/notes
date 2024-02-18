@@ -25,6 +25,7 @@
 * Savage Bridege / 1969 / https://movie.douban.com/subject/1305697/
 * Walter Defends Sarajevo / 1972 / https://movie.douban.com/subject/1291860/
 * I Even Met Happy Gypsies / 1967 / https://movie.douban.com/subject/1939009/
+  * https://www.youtube.com/watch?v=L3FvmCJfI74
 * Love Affair; or The Case of the Missing Switchboard Operator / 1967 / https://movie.douban.com/subject/1845292/
 * Who Sings Over There / 1980 /  https://movie.douban.com/subject/1304971/
 * WR - Mysteries of the Organism / 1971 / https://movie.douban.com/subject/1845260/
