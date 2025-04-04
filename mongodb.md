@@ -34,8 +34,10 @@ MongoDB provides two different view types: standard views and on-demand material
 
 Good example of join in official doc - https://www.mongodb.com/docs/manual/core/views/join-collections-with-view/
 
-* Pipeline
-* Aggregation
+* CRUD - read - find() 
+* Aggregation - stages of pipelines of manipulation 
+
+* Query - how is
 
 
 Spring data, find by property of a nested object
