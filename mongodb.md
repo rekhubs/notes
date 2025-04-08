@@ -4,8 +4,11 @@ hi
 ### Concepts
 
 * Document
+* JavaScript-based, thus objects and functions calls - e.g. `db.inventory.find( { qty: 20 } )`
+* Nested multi-level objects, can directly operate on 1 object
+* Array operations
 * Operation - js instead of sql
-* Stages
+* Aggregation pipeline of up to 1000 stages
 
 
 https://www.mongodb.com/docs/manual/introduction/
@@ -31,8 +34,17 @@ MongoDB provides two different view types: standard views and on-demand material
 * Indexes - Standard views use the indexes of the underlying collection. As a result, you cannot create, drop or re-build indexes on a standard view directly, nor get a list of indexes on the view. You can create indexes directly on on-demand materialized views because they are stored on disk.
 * Performance - On-demand materialized views provide better read performance than standard views because they are read from disk instead of computed as part of the query. This performance benefit increases based on the complexity of the pipeline and size of the data being aggregated.
 
-
 Good example of join in official doc - https://www.mongodb.com/docs/manual/core/views/join-collections-with-view/
+
+
+### Changes - developing a new service
+
+* Queries run on DB for support and dev different - js instead of sql
+* Main dev of queries no change - if we use the Spring Data method naming convention on the Repository interface; while other approaches will be different - e.g. annotated method with (SQL -> js) - see below
+
+--
+
+
 
 * CRUD - read - find() 
 * Aggregation - stages of pipelines of manipulation 
@@ -64,3 +76,14 @@ Another way - code criteria:
  Criteria.where("users")
         .elemMatch(Criteria.where("age").is(70).and("licence").is(true));
 ```
+
+
+### Query
+
+https://www.mongodb.com/docs/manual/reference/operator/query/
+
+Roughly,
+* select <-> collection.find()
+* group <-> collection.aggregate()
+
+
