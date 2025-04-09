@@ -10,8 +10,9 @@ hi
 * Operation - js instead of sql
 * Aggregation pipeline of up to 1000 stages
 
-
 https://www.mongodb.com/docs/manual/introduction/
+
+
 
 ### Do
 
@@ -86,4 +87,5 @@ Roughly,
 * select <-> collection.find()
 * group <-> collection.aggregate()
 
-
+Perks
+* js, so regex support
