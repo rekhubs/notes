@@ -89,3 +89,9 @@ Roughly,
 
 Perks
 * js, so regex support
+* 
+
+
+Data model / schema
+
+https://www.mongodb.com/docs/manual/data-modeling/schema-design-process/
