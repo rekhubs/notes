@@ -93,6 +93,11 @@ Perks
 * 
 
 
-Data model / schema
+### Data model / schema
+
+![image](https://github.com/user-attachments/assets/b4d3fec6-5a80-44b0-9360-6432b1b5e9f2)
+
+
+https://www.mongodb.com/docs/manual/core/schema-validation/specify-json-schema/#steps
 
 https://www.mongodb.com/docs/manual/data-modeling/schema-design-process/
