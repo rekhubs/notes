@@ -42,6 +42,7 @@ Good example of join in official doc - https://www.mongodb.com/docs/manual/core/
 
 * Queries run on DB for support and dev different - js instead of sql
 * Main dev of queries no change - if we use the Spring Data method naming convention on the Repository interface; while other approaches will be different - e.g. annotated method with (SQL -> js) - see below
+* Model definition - Start right inserting objects into collection without defining vs. create table with column definitions
 
 --
 
