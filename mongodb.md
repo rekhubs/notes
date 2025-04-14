@@ -98,9 +98,11 @@ Perks
 ![image](https://github.com/user-attachments/assets/b4d3fec6-5a80-44b0-9360-6432b1b5e9f2)
 
 
-https://www.mongodb.com/docs/manual/core/schema-validation/specify-json-schema/#steps
+* https://www.mongodb.com/docs/manual/core/schema-validation/specify-json-schema/#steps
+* https://www.mongodb.com/docs/manual/data-modeling/schema-design-process/
+* https://www.mongodb.com/docs/manual/reference/operator/query/jsonSchema/
+* https://datatracker.ietf.org/doc/html/draft-zyp-json-schema-04
 
-https://www.mongodb.com/docs/manual/data-modeling/schema-design-process/
 
 Create collection with schema:
 ```js
@@ -130,3 +132,19 @@ db.createCollection("students", {
    }
 } )
 ```
+
+#### Embedded Data Versus References
+
+https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/
+
+Embedded - pros
+
+* Better performance for read operations
+* The ability to retrieve related data in a single database operation
+* The ability to to update related data in a single atomic write operation
+
+References - use cases
+
+* Embedding would result in duplication of data but would not provide sufficient read performance advantages to outweigh the implications of the duplication. For example, when the embedded data frequently changes.
+* You need to represent complex many-to-many relationships or large hierarchical data sets.
+* The related entity is frequently queried on its own. For example, if you have employee and department data, you may consider embedding department information in the employee documents. However, if you often query for a list of departments, your application will perform best with a separate department collection that is linked to the employee collection with a reference.
