@@ -109,7 +109,7 @@ Perks
 * https://www.mongodb.com/docs/manual/reference/operator/query/jsonSchema/
 * https://datatracker.ietf.org/doc/html/draft-zyp-json-schema-04
 
-Note! Nature of NoSql, unlike relational, don't need to define every "column", just write in key-values.
+Note! Nature of NoSql, unlike relational, don't need to define every "column", just write in key-values. - see https://www.mongodb.com/docs/manual/data-modeling/#data-modeling
 Pro and con, can be used for dynamic data modeling. Only define some of the fields.
 
 Create collection with schema:
