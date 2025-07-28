@@ -37,6 +37,8 @@ MongoDB provides two different view types: standard views and on-demand material
 
 Good example of join in official doc - https://www.mongodb.com/docs/manual/core/views/join-collections-with-view/
 
+Note! Materialized Views need to be manually refreshed! see - https://www.mongodb.com/docs/manual/core/materialized-views/#3.-refresh-materialized-view
+
 
 ### Changes - developing a new service
 
