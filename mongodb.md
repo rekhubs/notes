@@ -4,11 +4,11 @@ hi
 ### Concepts
 
 * Document
-* JavaScript-based, thus objects and functions calls - e.g. `db.inventory.find( { qty: 20 } )`
+* JavaScript-based, thus objects and functions calls - e.g. `db.orders.find( { qty: 20 } )`
 * Nested multi-level objects, can directly operate on 1 object
 * Array operations
 * Operation - js instead of sql
-* Aggregation pipeline of up to 1000 stages
+* Aggregation pipeline of up to 1000 stages - `db.orders.aggregate( [ stage1, stage2, stage3 ] )`
 
 https://www.mongodb.com/docs/manual/introduction/
 
