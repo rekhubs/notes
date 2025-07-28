@@ -39,6 +39,10 @@ Good example of join in official doc - https://www.mongodb.com/docs/manual/core/
 
 Note! Materialized Views need to be manually refreshed! see - https://www.mongodb.com/docs/manual/core/materialized-views/#3.-refresh-materialized-view
 
+Dependending on view complexity (pipeline, agg) for standard and refresh rate for materialized.
+* Standard: lower delay from actual data
+* Materialized: faster in query - after data refreshed 
+
 
 ### Changes - developing a new service
 
