@@ -1,7 +1,7 @@
 hi
 
 
-### Concepts
+## Concepts
 
 * Document
 * JavaScript-based, thus objects and functions calls - e.g. `db.orders.find( { qty: 20 } )`
@@ -14,7 +14,7 @@ https://www.mongodb.com/docs/manual/introduction/
 
 
 
-### Do
+## Do
 
 The advantages of using documents are:
 
@@ -44,7 +44,7 @@ Dependending on view complexity (pipeline, agg) for standard and refresh rate fo
 * Materialized: faster in query - after data refreshed 
 
 
-### Changes - developing a new service
+## Changes - developing a new service
 
 * Queries run on DB for support and dev different - js instead of sql
 * Main dev of queries no change - if we use the Spring Data method naming convention on the Repository interface; while other approaches will be different - e.g. annotated method with (SQL -> js) - see below
@@ -57,9 +57,17 @@ Dependending on view complexity (pipeline, agg) for standard and refresh rate fo
 * CRUD - read - find() 
 * Aggregation - stages of pipelines of manipulation 
 
-* Query - how is
+### Query - How to do queries
+
+#### Method 1 - use template
+```java
+List<Person> result = template.query(Person.class)
+  .matching(query(where("age").lt(50).and("accounts.balance").gt(1000.00d)))
+  .all();
+```
 
 
+#### Method 2 - Named query by Spring Data 
 Spring data, find by property of a nested object
 
 https://stackoverflow.com/questions/55579240/spring-data-find-by-property-of-a-nested-object/55579268
@@ -69,7 +77,7 @@ https://stackoverflow.com/questions/55579240/spring-data-find-by-property-of-a-n
 
 `public List<Student> findByStudent_Grades_ClassName(final String className);`
 
-Another style - annotation with MongoDB-like js query:
+#### Method 3 - Annotate with MongoDB-like queries - Spring Data
 ```java
 public interface CustomRepository extends MongoRepository<PracticeQuestion, String> {
 
@@ -78,15 +86,14 @@ public interface CustomRepository extends MongoRepository<PracticeQuestion, Stri
 
 }
 ```
-
-Another way - code criteria:
+#### Method 4 - Write Criteria - Spring Data
 ```java
  Criteria.where("users")
         .elemMatch(Criteria.where("age").is(70).and("licence").is(true));
 ```
 
 
-### Query
+## Query
 
 https://www.mongodb.com/docs/manual/reference/operator/query/
 
@@ -99,7 +106,7 @@ Perks
 * 
 
 
-### Data model / schema
+## Data model / schema
 
 ![image](https://github.com/user-attachments/assets/b4d3fec6-5a80-44b0-9360-6432b1b5e9f2)
 
@@ -141,7 +148,7 @@ db.createCollection("students", {
 } )
 ```
 
-#### Embedded Data Versus References
+### Embedded Data Versus References
 
 https://www.mongodb.com/docs/manual/data-modeling/concepts/embedding-vs-references/
 
