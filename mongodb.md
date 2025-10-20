@@ -109,8 +109,9 @@ Perks
 blah
 
 `$project`:
-// _id: 0, // Exclude _id if not needed, otherwise it's included by default
-// allFields: "$$ROOT", // This creates a new field 'allFields' containing the entire document
+
+// _id: 0, // Exclude _id if not needed, otherwise it's included by default \
+// allFields: "$$ROOT", // This creates a new field 'allFields' containing the entire document \
 // newField: { $add: ["$field1", "$field2"] }, // Add a new calculated field
 
 ## Data model / schema
