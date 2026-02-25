@@ -8,6 +8,7 @@
 
 
 # Nushell
+Purpose: Use as interactive shell, not for scripting/programming. If xxx, tend to use bash or python or others.
 
 good
 * result rendering - tables
@@ -18,3 +19,6 @@ good
 not so good
 * $PATH += ?
 * complexity?
+
+just different
+* well, differences, need to learn
