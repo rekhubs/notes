@@ -22,3 +22,7 @@ not so good
 
 just different
 * well, differences, need to learn
+
+## Notes
+
+* `help commands | explore`  or `help commands`
