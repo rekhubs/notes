@@ -22,6 +22,8 @@ not so good
 
 just different
 * well, differences, need to learn
+* not such command..
+  * bat
 
 ## Notes
 
