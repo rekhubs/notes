@@ -19,6 +19,7 @@ good
 not so good
 * $PATH += ?
 * complexity?
+* interpolation - see example below
 
 just different
 * well, differences, need to learn
@@ -29,3 +30,11 @@ just different
 ## Notes
 
 * `help commands | explore`  or `help commands`
+
+<img width="422" height="431" alt="image" src="https://github.com/user-attachments/assets/d697b3ff-859f-4cf9-934e-63f131f36d81" />
+vs.
+```bash
+size=3;
+echo "hi $size"
+```
+
