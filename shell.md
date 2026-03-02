@@ -30,9 +30,15 @@ just different
 ## Notes
 
 * `help commands | explore`  or `help commands`
+* interpolation
 
-<img width="422" height="431" alt="image" src="https://github.com/user-attachments/assets/d697b3ff-859f-4cf9-934e-63f131f36d81" />
-vs.
+```shell
+let size=3;
+print $"hi ($size)"
+```
+
+vs. bash:
+
 ```bash
 size=3;
 echo "hi $size"
