@@ -28,6 +28,7 @@ just different
 * `echo "hi" > a.txt`  -->  `"hi" | save a.txt`
 * not such command.. see - https://www.nushell.sh/book/coming_from_bash.html
   * cat --> open
+  * grep --> ??
 
 ## Notes
 
