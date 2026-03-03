@@ -10,6 +10,8 @@
 # Nushell
 Purpose: Use as interactive shell, not for scripting/programming. If xxx, tend to use bash or python or others.
 
+.... that even you just want to use if for interactive shell, the tools (funcs, shorthands) you made previously based on bash are still scripts/programs, need to migrate as well if you want a seamless switch.
+
 good
 * result rendering - tables
 * new commands - http
