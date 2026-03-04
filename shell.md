@@ -7,7 +7,7 @@
 * nushell
 
 # ??
-No, if for int.. shell, a lot of scaffolding - build commands (mvn, npm, node, fnm, java, etc.) and your own custom commands/shorthands <-- so, consider those
+No, if for int.. shell, a lot of scaffolding - build commands (mvn, npm, node, fnm, java, etc.) and your own custom commands/shorthands. E.g. fnm doesn't natively support nushell. <-- so, consider those
 
 
 # Nushell
