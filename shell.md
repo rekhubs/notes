@@ -6,6 +6,9 @@
 * xsh + oh my zsh
 * nushell
 
+# ??
+No, if for int.. shell, a lot of scaffolding - build commands (mvn, npm, node, fnm, java, etc.) and your own custom commands/shorthands <-- so, consider those
+
 
 # Nushell
 Purpose: Use as interactive shell, not for scripting/programming. If xxx, tend to use bash or python or others.
