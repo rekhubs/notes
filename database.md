@@ -23,3 +23,12 @@ EXPLAIN SELECT * FROM tenk1;
 -------------------------------------------------------------
  Seq Scan on tenk1  (cost=0.00..445.00 rows=10000 width=244)
 ```
+
+* Simple sequential scan plan
+* Estimated start-up cost. This is the time expended before the output phase can begin, e.g., time to do the sorting in a sort node.
+* Estimated total cost. This is stated on the assumption that the plan node is run to completion, i.e., all available rows are retrieved.
+* Estimated number of rows output by this plan node. Again, the node is assumed to be run to completion.
+* Estimated average width of rows output by this plan node (in bytes).
+
+**Unit: costs in units of disk page fetches - `seq_page_cost` set to 1.0**
+
