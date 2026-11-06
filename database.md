@@ -32,3 +32,4 @@ EXPLAIN SELECT * FROM tenk1;
 
 **Unit: costs in units of disk page fetches - `seq_page_cost` set to 1.0**
 
+`xxx rows`: number emitted by nodes - not exact number of rows scanned, closer to returned/affected rows - e.g. when filtering by `WHERE`
